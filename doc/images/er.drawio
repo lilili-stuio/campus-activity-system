@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="drawio-skill" version="21.0.0" type="device">
+  <diagram name="数据库ER图" id="er-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Entity: t_user -->
+        <mxCell id="user-header" value="t_user 用户表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user-fields" value="&#xa;PK  id  BIGINT&#xa;student_id  VARCHAR(20)  UNIQUE&#xa;name  VARCHAR(50)&#xa;password  VARCHAR(128)&#xa;role  VARCHAR(10)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=13;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: t_activity -->
+        <mxCell id="activity-header" value="t_activity 活动表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="60" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activity-fields" value="&#xa;PK  id  BIGINT&#xa;title  VARCHAR(128)&#xa;description  TEXT&#xa;location  VARCHAR(100)&#xa;start_time  DATETIME&#xa;end_time  DATETIME&#xa;max_capacity  INT&#xa;current_num  INT&#xa;status  TINYINT&#xa;qr_code_key  VARCHAR(64)  UNIQUE&#xa;FK  created_by  BIGINT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=13;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="420" y="100" width="240" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: t_registration -->
+        <mxCell id="reg-header" value="t_registration 报名表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="reg-fields" value="&#xa;PK  id  BIGINT&#xa;FK  user_id  BIGINT&#xa;FK  activity_id  BIGINT&#xa;registered_at  DATETIME&#xa;&#xa;UNIQUE(user_id, activity_id)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=13;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="420" width="200" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: t_checkin -->
+        <mxCell id="checkin-header" value="t_checkin 签到表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="410" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="checkin-fields" value="&#xa;PK  id  BIGINT&#xa;FK  user_id  BIGINT&#xa;FK  activity_id  BIGINT&#xa;checkin_time  DATETIME" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=13;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="420" y="450" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Relationships ===== -->
+
+        <!-- User 1:N Registration -->
+        <mxCell id="edge-user-reg" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=14;fontColor=#c62828;strokeColor=#c62828;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="user-fields" target="reg-fields">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-user-reg-n" value="N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;fontColor=#c62828;strokeColor=#c62828;strokeWidth=2;endArrow=classic;startArrow=none;" edge="1" parent="1" source="user-fields" target="reg-fields">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Activity 1:N Registration -->
+        <mxCell id="edge-activity-reg" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=14;fontColor=#c62828;strokeColor=#c62828;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="activity-fields" target="reg-fields">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-activity-reg-n" value="N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.85;exitDx=0;exitDy=0;entryX=1;entryY=0.85;entryDx=0;entryDy=0;fontSize=14;fontColor=#c62828;strokeColor=#c62828;strokeWidth=2;endArrow=classic;startArrow=none;" edge="1" parent="1" source="activity-fields" target="reg-fields">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- User 1:N Checkin -->
+        <mxCell id="edge-user-checkin" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=14;fontColor=#c62828;strokeColor=#c62828;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="checkin-fields" target="reg-fields">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="600" />
+              <mxPoint x="40" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Better routing for User-Checkin relationship -->
+        <mxCell id="edge-user-chk2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a73e8;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;endArrow=classic;" edge="1" parent="1" source="user-fields" target="checkin-fields">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="260" />
+              <mxPoint x="390" y="260" />
+              <mxPoint x="390" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-user-chk-label" value="1:N 签到" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1a73e8;" vertex="1" parent="1">
+          <mxGeometry x="170" y="250" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Activity 1:N Checkin -->
+        <mxCell id="edge-act-chk" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0b8043;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classic;" edge="1" parent="1" source="activity-fields" target="checkin-header">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-act-chk-label" value="1:N 签到" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#0b8043;" vertex="1" parent="1">
+          <mxGeometry x="560" y="384" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- User 1:N Activity (created_by) -->
+        <mxCell id="edge-user-act" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=classic;dashed=1;" edge="1" parent="1" source="user-header" target="activity-header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="30" />
+              <mxPoint x="480" y="30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-user-act-label" value="1:N 创建 (created_by)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#e65100;" vertex="1" parent="1">
+          <mxGeometry x="270" y="18" width="160" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Relationship labels for User-Reg-Activity -->
+        <mxCell id="rel-label-ur" value="报名关系" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#c62828;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="440" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="校园活动管理系统 — ER 图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="250" y="640" width="550" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
