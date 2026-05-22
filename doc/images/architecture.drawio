@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="drawio-skill" version="21.0.0" type="device">
+  <diagram name="系统架构图" id="arch-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background -->
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1120" height="700" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Layer 1: Vue 3 前端 ============ -->
+
+        <!-- Label -->
+        <mxCell id="label-frontend" value="Vue 3&#xa;前端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="100" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Container -->
+        <mxCell id="container-frontend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="180" y="60" width="940" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-group: 页面组件 -->
+        <mxCell id="fe-pages" value="页面组件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=top;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="440" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fe-login" value="登录页" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="212" y="130" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe-list" value="活动列表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="322" y="130" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe-detail" value="活动详情" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="432" y="130" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe-reg" value="报名页面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="212" y="185" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe-admin" value="管理后台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="322" y="185" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe-mine" value="我的报名" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="432" y="185" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-group: 核心模块 -->
+        <mxCell id="fe-core" value="核心模块" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=top;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="660" y="80" width="440" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fe-router" value="Vue Router" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="672" y="130" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe-pinia" value="Pinia Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="812" y="130" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe-axios" value="Axios HTTP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="672" y="185" width="130" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Port label -->
+        <mxCell id="fe-port" value="localhost:5173" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="240" width="140" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Layer 2: SpringBoot 后端 ============ -->
+
+        <mxCell id="label-backend" value="SpringBoot&#xa;后端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="280" width="100" height="200" as="geometry" />
+        </mxCell>
+
+        <mxCell id="container-backend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="180" y="280" width="940" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-group: Controller -->
+        <mxCell id="be-ctrl" value="Controller 层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=top;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="286" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="be-auth" value="AuthController" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="212" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be-act" value="ActivityController" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="342" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be-chk" value="CheckinController" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="212" y="405" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-group: Service -->
+        <mxCell id="be-svc" value="Service 层 (业务逻辑)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=top;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="506" y="300" width="286" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="be-usv" value="UserService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="518" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be-asv" value="ActivityService&#xa;(行锁防超卖)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="648" y="350" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="be-csv" value="CheckinService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="518" y="410" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-group: 中间件 -->
+        <mxCell id="be-mid" value="中间件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=top;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="812" y="300" width="286" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="be-jwt" value="JWT 认证拦截器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="824" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be-cors" value="CORS 配置" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="954" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be-ex" value="全局异常处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="824" y="405" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Port label -->
+        <mxCell id="be-port" value="localhost:8080" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="460" width="140" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Layer 3: H2 数据库 ============ -->
+
+        <mxCell id="label-db" value="H2&#xa;内嵌数据库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="500" width="100" height="200" as="geometry" />
+        </mxCell>
+
+        <mxCell id="container-db" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="180" y="500" width="940" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-group: 数据表 -->
+        <mxCell id="db-tables" value="数据表 (JPA Entity)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=top;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="520" width="550" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tb-user" value="t_user&#xa;用户表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="212" y="570" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tb-activity" value="t_activity&#xa;活动表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="342" y="570" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tb-reg" value="t_registration&#xa;报名表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="472" y="570" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tb-checkin" value="t_checkin&#xa;签到表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="602" y="570" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-group: 存储 -->
+        <mxCell id="db-store" value="存储方式" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=top;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="770" y="520" width="330" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db-h2" value="H2 文件数据库" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=14;boundedLbl=1;strokeWidth=2;size=10;" vertex="1" parent="1">
+          <mxGeometry x="790" y="570" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="db-init" value="data.sql 初始化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="940" y="575" width="130" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Arrows between layers ============ -->
+
+        <!-- Frontend to Backend -->
+        <mxCell id="arrow-fe-be" value="HTTP / REST API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#1a73e8;strokeWidth=2;strokeColor=#1a73e8;" edge="1" parent="1" source="container-frontend" target="container-backend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Backend to Database -->
+        <mxCell id="arrow-be-db" value="JPA / JDBC" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#1a73e8;strokeWidth=2;strokeColor=#1a73e8;" edge="1" parent="1" source="container-backend" target="container-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
