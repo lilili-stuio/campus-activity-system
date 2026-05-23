@@ -1,0 +1,11 @@
+INSERT INTO t_user (student_id, name, password, role) VALUES ('admin', '管理员', '123456', 'admin');
+INSERT INTO t_user (student_id, name, password, role) VALUES ('stu001', '张三', '123456', 'student');
+INSERT INTO t_user (student_id, name, password, role) VALUES ('stu002', '李四', '123456', 'student');
+INSERT INTO t_user (student_id, name, password, role) VALUES ('223401010122', '秦炜沣', '123456', 'student');
+INSERT INTO t_user (student_id, name, password, role) VALUES ('223401010135', '李芾葳', '123456', 'admin');
+
+INSERT INTO t_activity (title, description, location, start_time, end_time, max_capacity, current_num, status, qr_code_key, created_by, created_at) VALUES
+('校园歌手大赛', '一年一度的校园歌手大赛，展示你的音乐才华！', '大学生活动中心', '2025-06-01 18:00:00', '2025-06-01 21:00:00', 200, 0, 1, 'a1b2c3d4e5f6g7h8', 1, NOW()),
+('编程马拉松', '48小时编程挑战赛，自由组队，赢取丰厚奖品。', '计算机学院3楼实验室', '2025-06-15 09:00:00', '2025-06-17 09:00:00', 60, 0, 1, 'b2c3d4e5f6g7h8i9', 1, NOW()),
+('春季运动会', '全校运动会，包括田径、球类等多项比赛。', '校体育场', '2025-05-20 08:00:00', '2025-05-22 17:00:00', 500, 0, 2, 'c3d4e5f6g7h8i9j0', 1, NOW()),
+('读书分享会', '每月一次的读书交流活动，本月主题：《人类简史》', '图书馆二楼报告厅', '2025-06-10 14:00:00', '2025-06-10 16:00:00', 50, 0, 1, 'd4e5f6g7h8i9j0k1', 1, NOW());
